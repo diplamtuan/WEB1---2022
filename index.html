@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Stores</title>
+</head>
+
+<body>
+    <div class="main">
+        <!-- Header top -->
+        <div class="header">
+            <div class="main__container">
+                <div class="header__logo">
+                    <img class="header__logo-img" src="./assets/img/logo.png" alt="Logo">
+                </div>
+                <div class="header__sreach">
+                    <input class="header__sreach-input" type="text" placeholder="Tìm kiếm">
+                    <i class="header__sreach-icon fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="header__control">
+                    <!-- Not Logged -->
+                    <div class="header__control-login">
+                        <p>Tài khoản của bạn</p>
+                        <i class="header__control-icon fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                    <!--    logged  -->
+                    <!-- <div class="header__control-logged">
+                        <i class="header__control-logged-icon fa-solid fa-user"></i>
+                        <span class="header__control-logged-name">Dip Lam Tuan</span>
+                        <ul class="header__control-logged-list">
+                            <li class="header__control-logged-item">Tài khoản của tôi</li>
+                            <li class="header__control-logged-item">Địa chỉ</li>
+                            <li class="header__control-logged-item">Đổi mật khẩu</li>
+                            <li class="header__control-logged-item">Đăng xuất</li>
+                        </ul>
+                    </div> -->
+                    <div class="header__control-cart">
+                        <p>Giỏ hàng</p>
+                        <i class="header__control-icon fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Navigation -->
+        <div class="header-navigation">
+            <div class="main__container header__navigation-body">
+                <div class="header-navigation__menu">
+                    <i class="header-navigation__menu-icon fa-solid fa-bars"></i>
+                    <h4 class="header-navigation__menu-title">Danh mục sản phẩm</h4>
+                </div>
+                <div class="header-navigation__contact">
+                    <i class="header-navigation__contact-icon fa-solid fa-phone"></i>
+                    <span class="header-navigation__contact-text">Hotline:</span>
+                    <span class="header-navigation__contact-number">0909 138 631</span>
+                </div>
+            </div>
+        </div>
+        <!-- Container -->
+        <div class="container">
+            <div class="main__container container-top">
+                <!-- Tasbar -->
+                <div class="container-tasbar">
+                    <ul class="container-tasbar__list">
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text container-tasbar__item-text--bold">Nổi Bật</span>
+                            <i class="container-tasbar__item-icon fa-solid fa-angle-right"></i>
+                            <ul class="container-tasbar__subnav">
+                                <li class="container-tasbar__subnav-item">Sách bán chạy</li>
+                                <li class="container-tasbar__subnav-item">Sách mới</li>
+                                <li class="container-tasbar__subnav-item">Sắp phát hành</li>
+                                <li class="container-tasbar__subnav-item">Sách giảm giá</li>
+                            </ul>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text">Truyện Tranh - Comic</span>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text">
+                                Văn Học Nước Ngoài
+                            </span>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text container-tasbar__item-text--bold"> Sách Văn
+                                Học</span>
+                            <i class="container-tasbar__item-icon fa-solid fa-angle-right"></i>
+                            <ul class="container-tasbar__subnav">
+                                <li class="container-tasbar__subnav-item">Sách văn học trong nước</li>
+                                <li class="container-tasbar__subnav-item">Bách hợp</li>
+                                <li class="container-tasbar__subnav-item">Ngôn tình</li>
+                                <li class="container-tasbar__subnav-item">Sách đam mỹ</li>
+                            </ul>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text">Truyện Tranh BL</span>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text">Sách Kĩ Năng Sống</span>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text"> Sách Thiếu Nhi</span>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text">Light Novel</span>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text">Văn Phòng Phẩm - Quà Tặng</span>
+                        </li>
+                        <li class="container-tasbar__item">
+                            <span class="container-tasbar__item-text container-tasbar__item-text--bold">Công Ty Phát
+                                Hành</span>
+                            <i class="container-tasbar__item-icon fa-solid fa-angle-right"></i>
+                            <ul class="container-tasbar__subnav container-tasbar__subnav-large">
+                                <li class="container-tasbar__subnav-item">Công ty cổ phần zgroup</li>
+                                <li class="container-tasbar__subnav-item">Amak</li>
+                                <li class="container-tasbar__subnav-item">Skybooks</li>
+                                <li class="container-tasbar__subnav-item">Chibooks</li>
+                                <li class="container-tasbar__subnav-item">Pavicobooks</li>
+                                <li class="container-tasbar__subnav-item">Công Ty Cổ Phần Waka</li>
+                                <li class="container-tasbar__subnav-item">IPM</li>
+                                <li class="container-tasbar__subnav-item">Nhã Nam</li>
+                                <li class="container-tasbar__subnav-item">Windbooks</li>
+                                <li class="container-tasbar__subnav-item">Việt Thư</li>
+                                <li class="container-tasbar__subnav-item">Wing Books</li>
+                                <li class="container-tasbar__subnav-item">Thái Hà</li>
+                                <li class="container-tasbar__subnav-item">Alphabooks</li>
+                                <li class="container-tasbar__subnav-item">Owlbooks</li>
+                                <li class="container-tasbar__subnav-item">AZ VietNam</li>
+                                <li class="container-tasbar__subnav-item container-tasbar__subnav-item--active">Tất cả
+                                    công ty phát hành</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Slider bar -->
+                <div class="container-slider">
+                    <img src="./assets/img/anh1.jpg" alt="" class="container-slider__img">
+                    <img src="./assets/img/anh2.jpg" alt="" class="container-slider__img">
+                    <img src="./assets/img/anh3.jpg" alt="" class="container-slider__img">
+                    <img src="./assets/img/anh4.jpg" alt="" class="container-slider__img">
+                    <div class="container-slide__control-left-right">
+                        <i class="container-slider__control-left fa-solid fa-circle-chevron-left"></i>
+                        <i class="container-slider__control-right fa-solid fa-circle-chevron-right"></i>
+                    </div>
+                    <div class="container-slider__control">
+                        <i onclick="currentDiv(0)"
+                            class="container-slider__control-dot container-slider__control-dot--active fa-solid fa-circle"></i>
+                        <i onclick="currentDiv(1)" class="container-slider__control-dot fa-solid fa-circle"></i>
+                        <i onclick="currentDiv(2)" class="container-slider__control-dot fa-solid fa-circle"></i>
+                        <i onclick="currentDiv(3)" class="container-slider__control-dot fa-solid fa-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="main__container container-list">
+                <!-- New books-->
+                <div class="container__item">
+                    <div class="container__item-title">
+                        <div class="container__item-title-text">Sách Mới</div>
+                        <a href="#" class="container__item-title-link">Xem tất cả</a>
+                    </div>
+                    <div class="container__item-content">
+                        <div class="container__content-book">
+                            <img src="./assets/img/anh1_sachmoi.jpg" alt="anh1_sachmoi"
+                                class="container__content-book-img">
+                            <h4 class="container__content-book-name">Cherry Magic, Tập 3 (Bản In Đầu Tiên) </h4>
+                            <p class="container__content-book-author">Yuu Toyota</p>
+                            <span class="container__content-book-new-price">98.000đ</span>
+                            <span class="container__content-book-old-price">109.000đ</span>
+                            <div class="container__content-book-discount">-2%</div>
+                        </div>
+                        <div class="container__content-book">
+                            <img src="./assets/img/anh2_sachmoi.jpg" alt="anh1_sachmoi"
+                                class="container__content-book-img">
+                            <h4 class="container__content-book-name">TRƯỜNG AN LY CA 2 - VÉN MÂY </h4>
+                            <p class="container__content-book-author">Úc Phức</p>
+                            <span class="container__content-book-new-price">148.000đ</span>
+                            <span class="container__content-book-old-price">165.000đ</span>
+                            <div class="container__content-book-discount">-10%</div>
+                        </div>
+                        <div class="container__content-book">
+                            <img src="./assets/img/anh3_sachmoi.jpg" alt="anh1_sachmoi"
+                                class="container__content-book-img">
+                            <h4 class="container__content-book-name">TRƯỜNG AN LY CA 1 - MÁU ĐỎ HOA</h4>
+                            <p class="container__content-book-author">Úc Phức</p>
+                            <span class="container__content-book-new-price">157.000đ</span>
+                            <span class="container__content-book-old-price">175.000đ</span>
+                            <div class="container__content-book-discount">-10%</div>
+                        </div>
+                        <div class="container__content-book">
+                            <img src="./assets/img/anh4_sachmoi.jpg" alt="anh1_sachmoi"
+                                class="container__content-book-img">
+                            <h4 class="container__content-book-name">LÀM SAO DỪNG LẠI THỜI GIAN </h4>
+                            <p class="container__content-book-author">Matt Haig</p>
+                            <span class="container__content-book-new-price">171.000đ</span>
+                            <span class="container__content-book-old-price">190.000đ</span>
+                            <div class="container__content-book-discount">-10%</div>
+                        </div>
+                        <div class="container__content-book">
+                            <img src="./assets/img/anh5_sachmoi.jpg" alt="anh1_sachmoi"
+                                class="container__content-book-img">
+                            <h4 class="container__content-book-name">Chàng Metalhead Nhà Bên</h4>
+                            <p class="container__content-book-author">Mamita</p>
+                            <span class="container__content-book-new-price">103.000đ</span>
+                            <span class="container__content-book-old-price">109.000đ</span>
+                            <div class="container__content-book-discount">-6%</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Coming soon-->
+                <!-- <div class="container__item">
+                    <div class="container__item-title">
+
+                    </div>
+                    <div class="container__item-content">
+
+                    </div>
+                </div> -->
+                <!-- Best seller -->
+                <!-- <div class="container__item">
+                    <div class="container__item-title">
+
+                    </div>
+                    <div class="container__item-content">
+
+                    </div>
+                </div> -->
+                <!-- Category -->
+                <!-- <div class="container__item">
+                    <div class="container__item-title">
+
+                    </div>
+                    <div class="container__item-content">
+
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+
+    </div>
+</body>
+<script src="./assets/js/main.js"></script>
+
+</html>
