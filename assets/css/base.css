@@ -8,7 +8,7 @@
 /* Main container */
 
 .main__container {
-    display:flex;
+    display: flex;
     max-width: 1200px;
     margin: auto;
     height: 100%;
@@ -23,11 +23,41 @@
 }
 
 html {
-    font-size:62.5%;
+    font-size: 62.5%;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
+/* Button left right */
+.button-left-right {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color: #869ea1;
+    cursor: pointer;
+}
 
+.button-left:hover {
+    opacity: 0.85;
+    color: var(--primary-color);
+}
 
+.button-right:hover {
+    opacity: 0.85;
+    color: var(--primary-color);
+}
+
+.button-left {
+    left: 0;
+}
+
+.button-right {
+    right: 0;
+}
+
+.button-left,
+.button-right {
+    position: absolute;
+    top: 50%;
+}

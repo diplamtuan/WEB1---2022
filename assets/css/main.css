@@ -331,38 +331,6 @@
 }
 
 
-.container-slide__control-left-right {
-    display: flex;
-    justify-content: space-between;
-    font-size: 30px;
-    color: #869ea1;
-    cursor: pointer;
-}
-
-.container-slider__control-left:hover {
-    opacity: 0.85;
-    color: var(--primary-color);
-}
-
-.container-slider__control-right:hover {
-    opacity: 0.85;
-    color: var(--primary-color);
-}
-
-.container-slider__control-left {
-    left: 0;
-}
-
-.container-slider__control-right {
-    right: 0;
-}
-
-.container-slider__control-left,
-.container-slider__control-right {
-    position: absolute;
-    top: 50%;
-}
-
 .container-slider__control-dot {
     padding: 4px;
     cursor: pointer;
@@ -384,7 +352,9 @@
     margin-top: 24px;
 }
 
-.container__item {}
+.container__item {
+    position:relative;
+}
 
 .container__item-title {
     display: flex;
@@ -431,15 +401,17 @@
 }
 
 .container__item-content {
-    display:flex;
+    position: relative;
+    ;
+    display: flex;
     justify-content: space-evenly;
 }
 
 .container__content-book {
-    position:relative;
+    position: relative;
     width: 130px;
     height: 309px;
-    margin-top:28px;
+    margin-top: 28px;
 }
 
 .container__content-book-img {
@@ -456,38 +428,38 @@
 }
 
 .container__content-book-author {
-    margin-top:10px;
+    margin-top: 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    color:var(--primary-color);
+    color: var(--primary-color);
 }
 
 .container__content-book-new-price {
-    display:block;
-    margin-top:10px;
-    color:var(--black-color);
+    display: block;
+    margin-top: 10px;
+    color: var(--black-color);
     font-weight: 600;
-    font-size:1.4rem;
+    font-size: 1.4rem;
 }
 
 .container__content-book-old-price {
-    color:#999;
-    font-size:1.2rem;
-    display:block;
-    margin-top:10px;
+    color: #999;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 10px;
     text-decoration: line-through;
 }
 
 .container__content-book-discount {
-    position:absolute;
-    top:0;
-    right:0;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 48px;
-    height:24px;
+    height: 24px;
     text-align: center;
-    background-color:#ffc000;
-    font-size:1.4rem;
-    color:var(--white-color);
+    background-color: #ffc000;
+    font-size: 1.4rem;
+    color: var(--white-color);
     font-weight: 400;
 }
 
@@ -500,4 +472,12 @@
     border-width: 10px 24px;
     border-style: solid;
     border-color: #ffc000 transparent transparent transparent;
+}
+
+.container__item-button {
+    display:none;
+}
+
+.container__item:hover .container__item-button{
+   display: block;
 }
