@@ -1,11 +1,15 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-const leftBtn = $('.container-slider__control-left');
-const rightBtn = $('.container-slider__control-right');
+const leftBtn = $('.button-left');
+const rightBtn = $('.button-right');
 const dots = $$('.container-slider__control-dot');
 const img = $$('.container-slider__img');
+const leftBtnWrap = $('.container__item-wrap-button-left');
+const rightBtnWrap = $('.container__item-wrap-button-right');
 
 var slideIndex = 0;
+
+
 
 showDivs(slideIndex);
 leftBtn.onclick = function () {

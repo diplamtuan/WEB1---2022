@@ -353,7 +353,8 @@
 }
 
 .container__item {
-    position:relative;
+    position: relative;
+    margin-bottom: 24px;
 }
 
 .container__item-title {
@@ -400,19 +401,34 @@
     color: var(--primary-color);
 }
 
+
+.container__item-wrap:hover .container__item-wrap-button {
+    display: block;
+}
+
+.container__item-wrap-button {
+    display: none;
+}
+
 .container__item-content {
     position: relative;
-    ;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 
 .container__content-book {
     position: relative;
-    width: 130px;
+    width: 219px;
     height: 309px;
     margin-top: 28px;
 }
+
+.container__item-book-wrap {
+    position: absolute;
+    right: 0;
+    width: 130px;
+}
+
 
 .container__content-book-img {
     width: 100%;
@@ -425,7 +441,21 @@
     font-weight: 300;
     line-height: 2.4rem;
     text-align: left;
+    cursor: pointer;
 }
+
+/* Category */
+
+.container__content-book-name-category {
+    margin-top: 30px;
+    width: 179px;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: bold;
+    text-align: left;
+    line-height: 2.4rem;
+}
+
 
 .container__content-book-author {
     margin-top: 10px;
@@ -475,9 +505,55 @@
 }
 
 .container__item-button {
-    display:none;
+    display: none;
 }
 
-.container__item:hover .container__item-button{
-   display: block;
+.container__item:hover .container__item-button {
+    display: block;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 100px;
+    background-color: var(--primary-color);
+}
+
+.footer__content {
+    padding:16px;
+    display:flex;
+    justify-content: space-evenly;
+    line-height: 3rem;
+}
+
+.footer__content-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer__content-title {
+    font-size: 1.8rem;
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.footer__content-email,
+.footer__content-hotline,
+.footer__content-phone {
+    font-size: 1.2rem;
+    color: var(--white-color);
+}
+
+
+.footer__content-link a{
+    font-size:1.4rem;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.footer__no-copy-right {
+    font-size:1.4rem;
+    color:var(--black-color);
+    text-align: center;
+    letter-spacing: 2px;
 }
