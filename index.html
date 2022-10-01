@@ -14,10 +14,11 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="grid main">
         <!-- Header top -->
-        <div class="header">
-            <div class="main__container">
+
+        <div class="header" id="header">
+            <div class="main__container header_content">
                 <div class="header__logo">
                     <img class="header__logo-img" src="./assets/img/logo.png" alt="Logo">
                 </div>
@@ -30,6 +31,10 @@
                     <div class="header__control-login">
                         <p>Tài khoản của bạn</p>
                         <i class="header__control-icon fa-sharp fa-solid fa-caret-down"></i>
+                        <ul class="header__login-list">
+                            <li class="header__login-item">Đăng Ký</li>
+                            <li class="header__login-item">Đăng Nhập</li>
+                        </ul>
                     </div>
                     <!--    logged  -->
                     <!-- <div class="header__control-logged">
@@ -37,7 +42,7 @@
                         <span class="header__control-logged-name">Dip Lam Tuan</span>
                         <ul class="header__control-logged-list">
                             <li class="header__control-logged-item">Tài khoản của tôi</li>
-                            <li class="header__control-logged-item">Địa chỉ</li>
+                            <li class="header__control-logged-item">Đơn Hàng</li>
                             <li class="header__control-logged-item">Đổi mật khẩu</li>
                             <li class="header__control-logged-item">Đăng xuất</li>
                         </ul>
@@ -47,11 +52,104 @@
                         <i class="header__control-icon fa-sharp fa-solid fa-caret-down"></i>
                     </div>
                 </div>
+                <div class="header__control-small">
+                    <i class="header__control-small-icon fa-solid fa-cart-shopping"></i>
+                    <i class="header__control-small-icon fa-solid fa-magnifying-glass"></i>
+                    <i class="header__control-small-icon fa-solid fa-bars"onclick="showMenu()"></i>
+                </div>
+
+
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <h3 class="header__menu-title">Menu</h3>
+                        <i class="header__menu-item-icon-left fa-solid fa-arrow-left"onclick="closeMenu()"></i>
+                    </li>
+                    <li class="header__menu-item header__menu-item-underline">
+                        <div class="header__menu-item-wrap" onclick="showAccount()">
+                            <i class="header__menu-item-icon fa-regular fa-user"></i>
+                            <span class="header__menu-name">
+                                Tài Khoản
+                                <i class="header__menu-item-icon-down fa-solid fa-caret-down"></i>
+                            </span>
+                        </div>
+
+                        <ul class="header__submenu-list header__submenu-list-account">
+                            <li class="header__submenu-item">
+                                <i class="header__submenu-item-icon fa-solid fa-user"></i>
+                                <span class="header__submenu-name">Đăng Ký</span>
+                            </li>
+                            <li class="header__submenu-item">
+                                <i class="header__submenu-item-icon fa-solid fa-user"></i>
+                                <span class="header__submenu-name">Đăng Nhập</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__menu-item header__menu-item-underline">
+                        <div class="header__menu-item-wrap" onclick="showStading()">
+                            <i class="header__menu-item-icon fa-regular fa-star"></i>
+                            <span class="header__menu-name">
+                                Nổi Bậc
+                                <i class="header__menu-item-icon-down fa-solid fa-caret-down"></i>
+                            </span>
+                        </div>
+
+                        <ul class="header__submenu-list header__submenu-list-stading">
+                            <li class="header__submenu-item">
+                                <i class="header__submenu-item-icon fa-regular fa-bookmark"></i>
+                                <span class="header__submenu-name">Sách Mới</span>
+                            </li>
+                            <li class="header__submenu-item">
+                                <i class="header__submenu-item-icon fa-regular fa-bookmark"></i>
+                                <span class="header__submenu-name">Sắp Phát Hành</span>
+                            </li>
+                            <li class="header__submenu-item">
+                                <i class="header__submenu-item-icon fa-regular fa-bookmark"></i>
+                                <span class="header__submenu-name">Sách Bán Chạy</span>
+                            </li>
+                            <li class="header__submenu-item">
+                                <i class="header__submenu-item-icon fa-regular fa-bookmark"></i>
+                                <span class="header__submenu-name">Danh Mục</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__menu-item header__menu-item-underline">
+                        <div class="header__menu-item-wrap" onclick="showFavorite()">
+                            <i class="header__menu-item-icon fa-solid fa-heart"></i>
+                            <span class="header__menu-name">Yêu Thích
+                                <i class="header__menu-item-icon-down fa-solid fa-caret-down"></i>
+                            </span>
+                        </div>
+                        <ul class="header__submenu-list header__submenu-list-favorite">
+                            <li class="header__submenu-item">
+                                <i class="header__submenu-item-icon fa-solid fa-pen-nib"></i>
+                                <span class="header__submenu-name">Việt Nam</span>
+                            </li>
+                            <li class="header__submenu-item">
+                                <i class="header__submenu-item-icon fa-solid fa-pen-nib"></i>
+                                <span class="header__submenu-name">Nước Ngoài</span>
+                            </li>
+                    </li>
+                </ul>
+                </li>
+                <li class="header__menu-item header__menu-item-underline">
+                    <div class="header__menu-item-wrap">
+                        <i class="header__menu-item-icon fa-solid fa-image"></i>
+                        <span class="header__menu-name">Truyện Tranh - Comic</span>
+                    </div>
+                </li>
+                <li class="header__menu-item header__menu-item-underline">
+                    <div class="header__menu-item-wrap">
+                        <i class="header__menu-item-icon fa-regular fa-building"></i>
+                        <span class="header__menu-name">Công Ty Phát Hành</span>
+                    </div>
+                </li>
+                </ul>
+
             </div>
         </div>
         <!-- Header Navigation -->
         <div class="header-navigation">
-            <div class="main__container header__navigation-body">
+            <div class="grid wide header__navigation-body">
                 <div class="header-navigation__menu">
                     <i class="header-navigation__menu-icon fa-solid fa-bars"></i>
                     <h4 class="header-navigation__menu-title">Danh mục sản phẩm</h4>
@@ -64,10 +162,10 @@
             </div>
         </div>
         <!-- Container -->
-        <div class="container">
-            <div class="main__container container-top">
+        <div class="grid wide container">
+            <div class="row container-top">
                 <!-- Tasbar -->
-                <div class="container-tasbar">
+                <div class="col l-2 m-0 c-0 container-tasbar">
                     <ul class="container-tasbar__list">
                         <li class="container-tasbar__item">
                             <span class="container-tasbar__item-text container-tasbar__item-text--bold">Nổi Bật</span>
@@ -140,7 +238,7 @@
                     </ul>
                 </div>
                 <!-- Slider bar -->
-                <div class="container-slider">
+                <div class="col l-10 m-12 c-12 container-slider">
                     <img src="./assets/img/anh1.jpg" alt="" class="container-slider__img">
                     <img src="./assets/img/anh2.jpg" alt="" class="container-slider__img">
                     <img src="./assets/img/anh3.jpg" alt="" class="container-slider__img">
@@ -159,7 +257,7 @@
                 </div>
             </div>
 
-            <div class="main__container container-list">
+            <div class="grid wide container-list">
 
                 <!-- New books-->
 
@@ -169,9 +267,9 @@
                         <a href="#" class="container__item-title-link">Xem tất cả</a>
                     </div>
 
-                    <div class="container__item-wrap">
-                        <div class="container__item-content">
-                            <div class="container__content-book">
+                    <div class="row container__item-wrap">
+                        <div class="row container__item-content">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh1_sachmoi.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -182,7 +280,7 @@
                                     <div class="container__content-book-discount">-2%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh2_sachmoi.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -193,7 +291,7 @@
                                     <div class="container__content-book-discount">-10%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh3_sachmoi.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -204,7 +302,7 @@
                                     <div class="container__content-book-discount">-10%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh4_sachmoi.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -215,7 +313,7 @@
                                     <div class="container__content-book-discount">-10%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh5_sachmoi.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -226,6 +324,8 @@
                                     <div class="container__content-book-discount">-6%</div>
                                 </div>
                             </div>
+
+
                         </div>
                         <div class="button-left-right container__item-wrap-button">
                             <i class="button-left container__item-wrap-button-left fa-solid fa-circle-chevron-left"></i>
@@ -241,9 +341,9 @@
                         <a href="#" class="container__item-title-link">Xem tất cả</a>
                     </div>
 
-                    <div class="container__item-wrap">
-                        <div class="container__item-content">
-                            <div class="container__content-book">
+                    <div class="row container__item-wrap">
+                        <div class="row container__item-content">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh1_sapphathanh.jpg" alt="anh1_sachphathanh"
                                         class="container__content-book-img">
@@ -254,7 +354,7 @@
                                     <div class="container__content-book-discount">-10%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh2_sapphathanh.jpg" alt="anh2_sapphathanh"
                                         class="container__content-book-img">
@@ -265,7 +365,7 @@
                                     <div class="container__content-book-discount">-15%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh3_sapphathanh.jpg" alt="anh3_sapphathanh"
                                         class="container__content-book-img">
@@ -276,7 +376,7 @@
                                     <div class="container__content-book-discount">-22%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh4_sapphathanh.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -287,7 +387,7 @@
                                     <div class="container__content-book-discount">-10%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh5_sapphathanh.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -313,9 +413,9 @@
                         <a href="#" class="container__item-title-link">Xem tất cả</a>
                     </div>
 
-                    <div class="container__item-wrap">
-                        <div class="container__item-content">
-                            <div class="container__content-book">
+                    <div class="row container__item-wrap">
+                        <div class="row container__item-content">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh1_sachbanchay.jpg" alt="anh1_sachphathanh"
                                         class="container__content-book-img">
@@ -326,7 +426,7 @@
                                     <div class="container__content-book-discount">-15%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh2_sachbanchay.jpg" alt="anh2_sapphathanh"
                                         class="container__content-book-img">
@@ -338,7 +438,7 @@
                                     <div class="container__content-book-discount">-5%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh4_sachbanchay.jpg" alt="anh3_sapphathanh"
                                         class="container__content-book-img">
@@ -349,7 +449,7 @@
                                     <div class="container__content-book-discount">-7%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh5_sachbanchay.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -360,7 +460,7 @@
                                     <div class="container__content-book-discount">-20%</div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__item-book-wrap">
                                     <img src="./assets/img/anh3_sachbanchay.jpg" alt="anh1_sachmoi"
                                         class="container__content-book-img">
@@ -386,9 +486,9 @@
                         <a href="#" class="container__item-title-link">Xem tất cả</a>
                     </div>
 
-                    <div class="container__item-wrap">
-                        <div class="container__item-content">
-                            <div class="container__content-book">
+                    <div class="row container__item-wrap">
+                        <div class="row container__item-content">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__content-book">
                                     <div class="container__item-book-wrap container__item-book-wrap-category">
                                         <img src="./assets/img/anh1_danhmuc.jpg" alt="anh1_sachphathanh"
@@ -397,7 +497,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__content-book">
                                     <div class="container__item-book-wrap container__item-book-wrap-category">
                                         <img src="./assets/img/anh2_danhmuc.jpg" alt="anh1_sachphathanh"
@@ -406,7 +506,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__content-book">
                                     <div class="container__item-book-wrap container__item-book-wrap-category">
                                         <img src="./assets/img/anh3_danhmuc.jpg" alt="anh1_sachphathanh"
@@ -416,7 +516,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__content-book">
                                     <div class="container__item-book-wrap container__item-book-wrap-category">
                                         <img src="./assets/img/anh4_danhmuc.jpg" alt="anh1_sachphathanh"
@@ -426,7 +526,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container__content-book">
+                            <div class="col l-2-4 m-4 c-6 container__content-book">
                                 <div class="container__content-book">
                                     <div class="container__item-book-wrap container__item-book-wrap-category">
                                         <img src="./assets/img/anh5_danhmucjpg.jpg" alt="anh1_sachphathanh"
@@ -447,37 +547,39 @@
             </div>
         </div>
         <div class="footer">
-            <div class="main__container footer__content">
-                <ul class="footer__content-list">
-                    <li class="footer__content-title">Hỗ Trợ Khách Hàng</li>
-                    <li class="footer__content-email">Email: sale.nobita@gmail.com</li>
-                    <li class="footer__content-hotline">
-                        Hotline: <span class="footer__content-phone">0938 424 289 </span>
-                    </li>
-                </ul>
-                <ul class="footer__content-list">
-                    <li class="footer__content-title">Giới Thiệu</li>
-                    <li class="footer__content-link"><a href="">Văn Hào Lưu Lạc - Tập 2: Dazai Osamu và Thời Kì Đen Tối</a></li>
-                    <li class="footer__content-link"><a href="">Về nobita</a></li>
-                    <li class="footer__content-link"><a href="">Tuyển Dụng</a></li>
-                </ul>
-                <ul class="footer__content-list">
-                    <li class="footer__content-title">Tài Khoản</li>
-                    <li class="footer__content-link"><a href="">Đăng nhập</a></li>
-                    <li class="footer__content-link"><a href="">Quên Pass</a></li>
-                </ul>
-                <ul class="footer__content-list">
-                    <li class="footer__content-title">Hướng Dẫn</li>
-                    <li class="footer__content-link"><a href="">Hướng dẫn mua hàng</a></li>
-                    <li class="footer__content-link"><a href="">Phương thức thanh toán</a></li>
-                    <li class="footer__content-link"><a href="">Câu hỏi thường gặp</a></li>
-                    <li class="footer__content-link"><a href="">Chính sách vận chuyển</a></li>
-                    <li class="footer__content-link"><a href="">Chính sách bảo mật thông tin</a></li>
-                </ul>
+            <div class="grid wide">
+                <div class="row footer__content">
+                    <ul class="col l-3 m-6 c-6 footer__content-list">
+                        <li class="footer__content-title">Hỗ Trợ Khách Hàng</li>
+                        <li class="footer__content-email">Email: sale.nobita@gmail.com</li>
+                        <li class="footer__content-hotline">
+                            Hotline: <span class="footer__content-phone">0938 424 289 </span>
+                        </li>
+                    </ul>
+                    <ul class="col l-3 m-6 c-6 footer__content-list">
+                        <li class="footer__content-title">Giới Thiệu</li>
+                        <li class="footer__content-link"><a href="">Văn Hào Lưu Lạc - Tập 2: Dazai Osamu và Thời Kì Đen
+                                Tối</a></li>
+                        <li class="footer__content-link"><a href="">Về nobita</a></li>
+                        <li class="footer__content-link"><a href="">Tuyển Dụng</a></li>
+                    </ul>
+                    <ul class="col l-3 m-6 c-6 footer__content-list">
+                        <li class="footer__content-title">Tài Khoản</li>
+                        <li class="footer__content-link"><a href="">Đăng nhập</a></li>
+                        <li class="footer__content-link"><a href="">Quên Pass</a></li>
+                    </ul>
+                    <ul class="col l-3 m-0-6 c-6 footer__content-list">
+                        <li class="footer__content-title">Hướng Dẫn</li>
+                        <li class="footer__content-link"><a href="">Hướng dẫn mua hàng</a></li>
+                        <li class="footer__content-link"><a href="">Phương thức thanh toán</a></li>
+                        <li class="footer__content-link"><a href="">Câu hỏi thường gặp</a></li>
+                        <li class="footer__content-link"><a href="">Chính sách vận chuyển</a></li>
+                        <li class="footer__content-link"><a href="">Chính sách bảo mật thông tin</a></li>
+                    </ul>
+                </div>
             </div>
             <p class="footer__no-copy-right">Copyright © 2014 Nobita.vn</p>
         </div>
-
     </div>
 </body>
 <script src="./assets/js/main.js"></script>

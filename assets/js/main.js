@@ -6,6 +6,13 @@ const dots = $$('.container-slider__control-dot');
 const img = $$('.container-slider__img');
 const leftBtnWrap = $('.container__item-wrap-button-left');
 const rightBtnWrap = $('.container__item-wrap-button-right');
+const accountSubMenu = $('.header__submenu-list-account');
+const stadingSubMenu = $('.header__submenu-list-stading');
+const favoriteSubmenu = $('.header__submenu-list-favorite');
+const arrowLeftBtn = $('.header__menu-item-icon-left');
+const menu = $('.header__menu-list');
+const menuBtn = $('.header__control-small-icon-menu');
+const body = $('body');
 
 var slideIndex = 0;
 
@@ -40,3 +47,23 @@ function showDivs(n) {
     dots[slideIndex].classList.add('container-slider__control-dot--active');
 }
 
+
+function showAccount() {
+    accountSubMenu.classList.toggle('show');
+}
+
+function showStading() {
+    stadingSubMenu.classList.toggle('show');
+}
+
+function showFavorite() {
+    favoriteSubmenu.classList.toggle('show');
+}
+
+function closeMenu() {
+    menu.style.width="0";
+}
+
+function showMenu() {
+    menu.style.width = "350px";
+}
